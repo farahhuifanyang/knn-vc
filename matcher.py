@@ -123,6 +123,8 @@ class KNeighborsVC(nn.Module):
             # save full sequence
             features = ( features*weights[:, None] ).sum(dim=0) # (seq_len, dim)
         
+        print(f"features shape: {features.shape}")
+        print(f"features: {features}")
         return features
 
 
